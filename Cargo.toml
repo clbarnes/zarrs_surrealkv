@@ -1,0 +1,18 @@
+[package]
+name = "zarrs_surrealkv"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+async-trait = "0.1.92"
+env_logger = "0.11.11"
+futures = "0.3.34"
+log = "0.4.34"
+surrealkv = { version = "1.0", default-features = false }
+temp_testdir = "0.2.3"
+tokio = { version = "1.53.2", features = ["full"] }
+zarrs = { version = "0.23.14", default-features = false, features = ["async"] }
+zarrs_storage = { version = "0.4.5", features = ["async"] }
+
+[dev-dependencies]
+criterion = { version = "0.8.2", features = ["async_tokio"] }
